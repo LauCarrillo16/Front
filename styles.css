@@ -1,0 +1,72 @@
+:root{
+    --color-primario: #83bdfc;
+    --color-secundario: #ffffff;
+    --color-tercero: #000000;
+    --color-cuarto: #0672f3;
+    --color-quinto: #a84849;
+    --color-sexto: #064499;
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    margin: 0 ;
+    padding: 0;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background-color: #612b2c;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.panel a{
+    text-decoration: none;
+    color: var(--color-secundario);
+}
+.circle:hover {
+    background-color: var(--color-quinto);
+}
+.panel {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.panelh1{
+    color: var(--color-tercero);
+    padding-bottom: 40px;
+}
+
+.titleform{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-control{
+    margin-top: 10px;
+    margin: 10px;
+}
+
+#membersfilter, #listTrainings, .btn{
+    background-color: var(--color-sexto);
+}
+
+.navtop h1{
+text-align: left;
+}
+
+.volver{
+    background-color: var(--color-quinto);
+    color: var(--color-secundario);
+}
+
+.volver:hover{
+    background-color: var(--color-quinto);
+    color: var(--color-tercero);
+}
+

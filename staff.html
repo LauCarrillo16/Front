@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+<link rel="stylesheet" href="styles.css" />
+<script src="data.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex align-items-center">
+                <button type="button" class="btn btn-secondary me-3 volver" onclick="location.href='/panel.html'">Volver al Panel</button>
+            </div>
+            <h1 class="flex-grow-1 text-center mb-0 panelh1">Staff</h1>
+            <div style="width: 120px;"></div>
+        </div>
+        <div class="row">
+            <!-- Sección Agregar Staff -->
+            <div class="col-md-4">
+                <h4 class="titleform">Agregar Staff</h4>
+                <form id="addStaffForm">
+                    <input type="text" id="fullName" class="form-control mb-3" placeholder="Nombre Completo" required>
+                    <select id="employeeType" class="form-control mb-3" required>
+                        <option value="" disabled selected>Tipo de Empleado</option>
+                        <option value="Entrenador">Entrenador</option>
+                        <option value="Nutricionista">Nutricionista</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Agregar Staff</button>
+                </form>
+            </div>
+
+            <!-- Sección Listar Staff -->
+            <div class="col-md-8">
+                <div class="d-flex justify-content-around align-items-center mb-3">
+                    <h4 class="mb-0">Listado Staff</h4>
+                    <div>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Filtro
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="filterProductsByPrice('low')">Menor a $50</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterProductsByPrice('medium')">Entre $50 y $100</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterProductsByPrice('high')">Mayor a $100</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterProductsByPrice('all')">Todos</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <table class="table table-striped  text-center">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo de Empleado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="staffTable">
+                        <!-- Aquí se cargará dinámicamente la información -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
