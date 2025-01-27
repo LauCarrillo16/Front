@@ -73,6 +73,21 @@ body {
     margin: 10px;
 }
 
+.col-md-4 {
+    background-color: #035e6441;
+    padding: 3ch;
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+
+}
+
+.col-md-8 {
+    background-color: #a79bb362;
+    padding: 3ch;
+    backdrop-filter: blur(10px);  
+    border-radius: 12px;
+}
+
 #membersfilter, #listTrainings, .btn{
     background-color: var(--color-sexto);
 }
