@@ -1,0 +1,157 @@
+:root{
+    --color-primario: #83bdfc;
+    --color-secundario: #ffffff;
+    --color-tercero: #ffffff;
+    --color-cuarto: #0672f3;
+    --color-quinto: #a84849;
+    --color-sexto: #064499;
+}
+
+/* Animación página principal */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    margin: 0 ;
+    padding: 0;
+}
+
+.circle {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 150px;
+  height: 150px;
+  background-color: #2b4d61;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.circle:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    /* #044e42,
+    #002bff,
+    #2e065a,
+    #0077ff, */
+    #291877,
+    #2d4c69,
+    #13768f,
+    #133e8f,
+    #13268f,
+    #054858
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-circle 16s linear infinite;
+  transition: opacity 1s ease-out;
+  border-radius: 50%;
+}
+
+@keyframes glowing-circle {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.circle:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0000002f;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+}
+
+.panel a{
+    text-decoration: none;
+    color: var(--color-secundario);
+}
+.circle:hover {
+    background-color: var(--color-quinto);
+}
+.panel {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.panelh1{
+    color: var(--color-tercero);
+    padding-bottom: 40px;
+}
+
+.titleform{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-control{
+    margin-top: 10px;
+    margin: 10px;
+}
+
+#membersfilter, #listTrainings, .btn{
+    background-color: var(--color-sexto);
+}
+
+.navtop h1{
+text-align: left;
+}
+
+.volver{
+    background-color: var(--color-quinto);
+    color: var(--color-secundario);
+}
+
+.volver:hover{
+    background-color: var(--color-quinto);
+    color: var(--color-tercero);
+}
+
